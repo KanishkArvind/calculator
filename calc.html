@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Calculator</title>
+    <script>
+        function add() {
+            let x = document.forms["myForm"]["fno"].value;
+            let y = document.forms["myForm"]["sno"].value;
+            let z = Number(fno.value) + Number(sno.value);
+            document.write(x + "+" + y + "=" + z);
+        }
+        function sub() {
+            let x = document.forms["myForm"]["fno"].value;
+            let y = document.forms["myForm"]["sno"].value;
+            let z = Number(fno.value) - Number(sno.value);
+            document.write(x + "-" + y + "=" + z);
+        }
+        function mul() {
+            let x = document.forms["myForm"]["fno"].value;
+            let y = document.forms["myForm"]["sno"].value;
+            let z = Number(fno.value) * Number(sno.value);
+            document.write(x + "*" + y + "=" + z);
+        }
+        function div() {
+            let x = document.forms["myForm"]["fno"].value;
+            let y = document.forms["myForm"]["sno"].value;
+            let z = Number(fno.value) / Number(sno.value);
+            document.write(x + "/" + y + "=" + z);
+        }
+    </script>
+</head>
+<body style="background: aquamarine;">
+    <center>
+        <h1>Calculator</h1>
+    </center>
+    <form name="myForm" onsubmit="return validateForm()" method="post">
+        <label for="fno">Enter the first number:</label><br>
+        <input type="tel" id="fno" name="fno"><br><br>
+        <label for="sno">Enter the second number:</label><br>
+        <input type="tel" id="sno" name="sno"><br><br>
+        <button type="button" onclick="add()">Add</button><br><br>
+        <button type="button" onclick="sub()">Subtract</button><br><br>
+        <button type="button" onclick="mul()">Multiply</button><br><br>
+        <button type="button" onclick="div()">Divide</button><br><br>
+    </form>
+</body>
+</html>
